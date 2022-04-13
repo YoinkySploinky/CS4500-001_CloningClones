@@ -48,8 +48,8 @@ public class Main {
                 break;
             }
             else {
-                moveX = userInput.nextInt();
-                moveY = userInput.nextInt();
+                moveX = userInput.nextInt() - 1;
+                moveY = userInput.nextInt() - 1;
             }
         }
 

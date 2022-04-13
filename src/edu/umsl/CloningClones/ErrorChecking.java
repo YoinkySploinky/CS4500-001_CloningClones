@@ -20,23 +20,29 @@ public class ErrorChecking {
 
     public boolean errMoveCheck(int moveX, int moveY, int boardY, int[][] board){
 
-        if (moveX == 0) {
-            System.out.println("Error! Attempted move will leave the board! Please try another checker.");
+        if (board[moveX][moveY] == 1) {
+            if (moveX <= 0) {
+                System.out.println("Error! Attempted move will leave the board! Please try another checker.");
+                return false;
+            }
+            if (moveY + 1 >= boardY) {
+                System.out.println("Error! Attempted move will leave the board! Please try another checker.");
+                return false;
+            }
+            if (board[moveX - 1][moveY] == 1) {
+                System.out.println("Error! There is a piece already above this checker! Please try another checker.");
+                return false;
+            }
+            if (board[moveX][moveY + 1] == 1) {
+                System.out.println("Error! There is a piece already to the right of this checker! Please try another checker.");
+                return false;
+            }
+            return true;
+        }
+        else {
+            System.out.println("Error! Attempted move has no checker! Please try choosing a space with a checker.");
             return false;
         }
-        if (moveY + 1 > boardY) {
-            System.out.println("Error! Attempted move will leave the board! Please try another checker.");
-            return false;
-        }
-        if (board[moveX-1][moveY] == 1) {
-            System.out.println("Error! There is a piece already above this checker! Please try another checker.");
-            return false;
-        }
-        if (board[moveX][moveY+1] == 1) {
-            System.out.println("Error! There is a piece already to the right of this checker! Please try another checker.");
-            return false;
-        }
-        return true;
     }
 
 }
