@@ -27,6 +27,5 @@ public class Mascot extends Application {
         primaryStage.setTitle("Testing Pictures");
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 }
