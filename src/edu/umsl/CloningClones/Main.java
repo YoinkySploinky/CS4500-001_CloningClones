@@ -1,7 +1,16 @@
 package edu.umsl.CloningClones;
 import java.util.*;
+import javafx.application.Application;
+import javafx.stage.Stage;
+import javafx.scene.Scene;
+import javafx.scene.control.ContentDisplay;
+import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Color;
 
-public class Main {
+public abstract class Main extends Application{
 
     static ErrorChecking error = new ErrorChecking();
     static Scanner userInput = new Scanner(System.in);
@@ -83,6 +92,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        Mascot mascot= new Mascot();
+        launch(Mascot.class);
         int x = 0, y = 0, newX = 0, newY = 0;
         int[][] board;
         boolean exit = false, errBoard = false;
