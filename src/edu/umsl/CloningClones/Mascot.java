@@ -9,21 +9,20 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.paint.Color;
 
-public class Mascot extends Application {
-    @Override
-    public void start (Stage primaryStage) {
-        ImageView us = new ImageView(new Image("pictures/mascot1.png"));
-        Label lb1 = new Label("Mascot", us);
-        lb1.setStyle("-fx-border-color: green; -fx-border-width: 2");
-        lb1.setContentDisplay(ContentDisplay.BOTTOM);
-        lb1.setTextFill(Color.RED);
+public class Mascot {
+    String playPhrase[] = new String[10];
 
-        HBox pane = new HBox(20);
-        pane.getChildren().addAll(lb1);
-
-        Scene scene = new Scene(pane, 450,150);
-        primaryStage.setTitle("Testing Pictures");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+    public String[] getPlayPhrase() {
+        playPhrase[0]="";
+        playPhrase[1]="";
+        playPhrase[2]="";
+        playPhrase[3]="";
+        playPhrase[4]="";
+        playPhrase[5]="";
+        playPhrase[6]="";
+        playPhrase[7]="";
+        playPhrase[8]="";
+        playPhrase[9]="";
+        return playPhrase;
     }
 }
