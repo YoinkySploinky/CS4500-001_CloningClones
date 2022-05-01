@@ -1,7 +1,8 @@
 package edu.umsl.CloningClones;
 
 public class ErrorChecking {
-
+    //we may need to add a maximum board size because there is only so much screen space for javafx
+    //I have resized the board for a 20 by 20 board and smaller
     public boolean errBoardSize(int x, int y) {
 
         if (x >= 8 && y >= 8) {

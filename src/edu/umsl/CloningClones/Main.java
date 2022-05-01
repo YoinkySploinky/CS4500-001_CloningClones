@@ -1,19 +1,28 @@
 package edu.umsl.CloningClones;
 import java.util.*;
+
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
 import javafx.application.Application;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.ContentDisplay;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.paint.Color;
+import javafx.animation.Animation;
+import javafx.animation.Timeline;
+import javafx.util.Duration;
 
 public class Main extends Application{
 
     static ErrorChecking error = new ErrorChecking();
+    Mascot mascot= new Mascot();
     static Scanner userInput = new Scanner(System.in);
 
     public static int[][] setBoard(int x, int y) {
@@ -91,14 +100,16 @@ public class Main extends Application{
         }
 
     }
-    public void start (Stage primaryStage) {
+    public void start (Stage primaryStage) throws InterruptedException {
+        StackPane rootPane = new StackPane();
         // Create a GridPane
-        FlowPane rootPane = new FlowPane();
-        rootPane.setHgap(5);
+        FlowPane subRootPane = new FlowPane();
+        subRootPane.setHgap(5);
+        subRootPane.setStyle("-fx-background-color: AQUA");
         GridPane pane = new GridPane();
         Scanner input = new Scanner(System.in);
 
-        // Create rectangles and add to pane
+        // creating board
         int count = 0;
         double s = 80;// side of rectangle
         System.out.println("Enter the square size you would like:");
@@ -129,7 +140,7 @@ public class Main extends Application{
                 }
             }
         }
-        HBox newPane = new HBox();
+        HBox newPane = new HBox();//mascot
         ImageView us = new ImageView(new Image("./pictures/mascot1.png"));
         us.setFitHeight(100);
         us.setFitWidth(100);
@@ -138,19 +149,27 @@ public class Main extends Application{
         lb1.setContentDisplay(ContentDisplay.GRAPHIC_ONLY);
         lb1.setTranslateX(10);
         lb1.setTranslateY(500);
-        newPane.getChildren().addAll(lb1);
+//        Rectangle speachBubble = new Rectangle(10, 10, 100, 100);
+//        speachBubble.setFill(Color.BEIGE);
+        //mascot speaking (below)
+        Label mascotSay = new Label("Hello There! This is how I speak! Blah Blah how will this text wrap test test test test test");
+        mascotSay.setContentDisplay(ContentDisplay.CENTER);
+        mascotSay.setTranslateX(5);
+        mascotSay.setTranslateY(450);
+        mascotSay.setMaxWidth(250);
+        mascotSay.setWrapText(true);
+        newPane.getChildren().addAll(lb1,mascotSay);
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(rootPane,1000,650,Color.AQUA);
-        rootPane.getChildren().addAll(pane,newPane);
-        primaryStage.setTitle("java2s.com");
+        rootPane.getChildren().addAll(subRootPane);
+        subRootPane.getChildren().addAll(pane,newPane);
+        primaryStage.setTitle("Freeing the Clones");
         primaryStage.setScene(scene); // Place in scene in the stage
         primaryStage.show();
+
     }
     public static void main(String[] args) {
-        //creates new instance of mascot class and launches javafx
-//        Mascot mascot= new Mascot();
-//        launch(Mascot.class);
         launch(args);
 
         int x = 0, y = 0, newX = 0, newY = 0;
