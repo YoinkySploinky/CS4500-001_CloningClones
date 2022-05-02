@@ -6,6 +6,7 @@ import javafx.animation.KeyValue;
 import javafx.application.Application;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
@@ -140,6 +141,25 @@ public class Main extends Application{
                 }
             }
         }
+
+        // adds clones to the board that should properly scale based on *s*
+        for (int i = 0; i < z; i++) {
+            for(int j = 0; j < z; j++) {
+                Circle clone = new Circle(s/2, Color.CHARTREUSE);
+                if (i == z - 1 && j == 0) {
+                    pane.add(clone,j, i);
+                }
+                if (i == z - 2 && j == 0) {
+                    pane.add(clone,j, i);
+                }
+                if (i == z - 1 && j == 1) {
+                    pane.add(clone,j, i);
+                }
+            }
+        }
+
+
+
         HBox newPane = new HBox();//mascot
         ImageView us = new ImageView(new Image("./pictures/mascot1.png"));
         us.setFitHeight(100);
