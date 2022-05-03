@@ -4,7 +4,9 @@ import java.util.*;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
@@ -142,23 +144,40 @@ public class Main extends Application{
             }
         }
 
+
+
         // adds clones to the board that should properly scale based on *s*
         for (int i = 0; i < z; i++) {
             for(int j = 0; j < z; j++) {
                 Circle clone = new Circle(s/2, Color.CHARTREUSE);
+                clone.setOpacity(0);
                 if (i == z - 1 && j == 0) {
-                    pane.add(clone,j, i);
+                    clone.setOpacity(1);
+                    pane.add(clone, j, i);
                 }
-                if (i == z - 2 && j == 0) {
-                    pane.add(clone,j, i);
+                else if (i == z - 2 && j == 0) {
+                    clone.setOpacity(1);
+                    pane.add(clone, j, i);
                 }
-                if (i == z - 1 && j == 1) {
+                else if (i == z - 1 && j == 1) {
+                    clone.setOpacity(1);
+                    pane.add(clone, j, i);
+                }
+                else {
                     pane.add(clone,j, i);
                 }
             }
         }
 
-
+//        EventHandler<MouseEvent> eventHandler = new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent e) {
+//                System.out.println("Hello World");
+//                clone.setFill(Color.DARKSLATEBLUE);
+//            }
+//        };
+//        //Registering the event filter
+//        clone.addEventFilter(MouseEvent.MOUSE_CLICKED, eventHandler);
 
         HBox newPane = new HBox();//mascot
         ImageView us = new ImageView(new Image("./pictures/mascot1.png"));
