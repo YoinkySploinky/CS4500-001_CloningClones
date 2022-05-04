@@ -115,11 +115,9 @@ public class Main extends Application{
         // creating board
         int count = 0;
         double s = 80;// side of rectangle
-        System.out.println("Enter the square size you would like:");
-        int z = input.nextInt();
-        if(z>8 && z<15) s = 45;
-        else if(z>14 && z<21) s=32;
-        if (z%2 == 0){ //only works for even numbers
+        //board is always going to be 8 by 8
+        int z = 8;
+//        if (z%2 == 0){ //only works for even numbers
             for (int i = 0; i < z; i++) {
                 count++;
                 for (int j = 0; j < z; j++) {
@@ -130,19 +128,19 @@ public class Main extends Application{
                     count++;
                 }
             }
-        }
-        else { //only works for odd numbers
-            for (int i = 0; i < z; i++) {
-                for (int j = 0; j < z; j++) {
-                    Rectangle r = new Rectangle(s, s, s, s);
-                    if (count % 2 == 0) {
-                        r.setFill(Color.WHITE);
-                    }
-                    pane.add(r, j, i);
-                    count++;
-                }
-            }
-        }
+//        }
+//        else { //only works for odd numbers
+//            for (int i = 0; i < z; i++) {
+//                for (int j = 0; j < z; j++) {
+//                    Rectangle r = new Rectangle(s, s, s, s);
+//                    if (count % 2 == 0) {
+//                        r.setFill(Color.WHITE);
+//                    }
+//                    pane.add(r, j, i);
+//                    count++;
+//                }
+//            }
+//        }
 
 
 
