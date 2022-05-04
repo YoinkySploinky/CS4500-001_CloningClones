@@ -148,7 +148,7 @@
             <Circle fx:id="clone00" fill="CHARTREUSE" opacity="0.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
             </children>
         </GridPane>
-      <Button layoutX="546.0" layoutY="39.0" mnemonicParsing="false" text="Reset" />
+      <Button layoutX="546.0" layoutY="39.0" mnemonicParsing="false" text="Reset" onMouseClicked="#resetBoard"/>
       <Button layoutX="648.0" layoutY="39.0" mnemonicParsing="false" text="Give Up" />
     </children>
 </AnchorPane>

@@ -614,69 +614,135 @@ public class HelloController {
             }
         }
     }
+    public void resetBoard(MouseEvent e){
+        clone60.setOpacity(1);
+        clone60.setFill(Color.DODGERBLUE);
+        clone70.setOpacity(1);
+        clone70.setFill(Color.DODGERBLUE);
+        clone71.setOpacity(1);
+        clone71.setFill(Color.DODGERBLUE);
+        clone00.setOpacity(0);
+        clone00.setFill(Color.CHARTREUSE);
+        clone10.setOpacity(0);
+        clone10.setFill(Color.CHARTREUSE);
+        clone20.setOpacity(0);
+        clone20.setFill(Color.CHARTREUSE);
+        clone30.setOpacity(0);
+        clone30.setFill(Color.CHARTREUSE);
+        clone40.setOpacity(0);
+        clone40.setFill(Color.CHARTREUSE);
+        clone50.setOpacity(0);
+        clone50.setFill(Color.CHARTREUSE);
+        clone01.setOpacity(0);
+        clone01.setFill(Color.CHARTREUSE);
+        clone11.setOpacity(0);
+        clone11.setFill(Color.CHARTREUSE);
+        clone21.setOpacity(0);
+        clone21.setFill(Color.CHARTREUSE);
+        clone31.setOpacity(0);
+        clone31.setFill(Color.CHARTREUSE);
+        clone41.setOpacity(0);
+        clone41.setFill(Color.CHARTREUSE);
+        clone51.setOpacity(0);
+        clone51.setFill(Color.CHARTREUSE);
+        clone61.setOpacity(0);
+        clone61.setFill(Color.CHARTREUSE);
+        clone02.setOpacity(0);
+        clone02.setFill(Color.CHARTREUSE);
+        clone12.setOpacity(0);
+        clone12.setFill(Color.CHARTREUSE);
+        clone22.setOpacity(0);
+        clone22.setFill(Color.CHARTREUSE);
+        clone32.setOpacity(0);
+        clone32.setFill(Color.CHARTREUSE);
+        clone42.setOpacity(0);
+        clone42.setFill(Color.CHARTREUSE);
+        clone52.setOpacity(0);
+        clone52.setFill(Color.CHARTREUSE);
+        clone62.setOpacity(0);
+        clone62.setFill(Color.CHARTREUSE);
+        clone72.setOpacity(0);
+        clone72.setFill(Color.CHARTREUSE);
+        clone03.setOpacity(0);
+        clone03.setFill(Color.CHARTREUSE);
+        clone13.setOpacity(0);
+        clone13.setFill(Color.CHARTREUSE);
+        clone23.setOpacity(0);
+        clone23.setFill(Color.CHARTREUSE);
+        clone33.setOpacity(0);
+        clone33.setFill(Color.CHARTREUSE);
+        clone43.setOpacity(0);
+        clone43.setFill(Color.CHARTREUSE);
+        clone53.setOpacity(0);
+        clone53.setFill(Color.CHARTREUSE);
+        clone63.setOpacity(0);
+        clone63.setFill(Color.CHARTREUSE);
+        clone73.setOpacity(0);
+        clone73.setFill(Color.CHARTREUSE);
+        clone04.setOpacity(0);
+        clone04.setFill(Color.CHARTREUSE);
+        clone14.setOpacity(0);
+        clone14.setFill(Color.CHARTREUSE);
+        clone24.setOpacity(0);
+        clone24.setFill(Color.CHARTREUSE);
+        clone34.setOpacity(0);
+        clone34.setFill(Color.CHARTREUSE);
+        clone44.setOpacity(0);
+        clone44.setFill(Color.CHARTREUSE);
+        clone54.setOpacity(0);
+        clone54.setFill(Color.CHARTREUSE);
+        clone64.setOpacity(0);
+        clone64.setFill(Color.CHARTREUSE);
+        clone74.setOpacity(0);
+        clone74.setFill(Color.CHARTREUSE);
+        clone05.setOpacity(0);
+        clone05.setFill(Color.CHARTREUSE);
+        clone15.setOpacity(0);
+        clone15.setFill(Color.CHARTREUSE);
+        clone25.setOpacity(0);
+        clone25.setFill(Color.CHARTREUSE);
+        clone35.setOpacity(0);
+        clone35.setFill(Color.CHARTREUSE);
+        clone45.setOpacity(0);
+        clone45.setFill(Color.CHARTREUSE);
+        clone55.setOpacity(0);
+        clone55.setFill(Color.CHARTREUSE);
+        clone65.setOpacity(0);
+        clone65.setFill(Color.CHARTREUSE);
+        clone75.setOpacity(0);
+        clone75.setFill(Color.CHARTREUSE);
+        clone06.setOpacity(0);
+        clone06.setFill(Color.CHARTREUSE);
+        clone16.setOpacity(0);
+        clone16.setFill(Color.CHARTREUSE);
+        clone26.setOpacity(0);
+        clone26.setFill(Color.CHARTREUSE);
+        clone36.setOpacity(0);
+        clone36.setFill(Color.CHARTREUSE);
+        clone46.setOpacity(0);
+        clone46.setFill(Color.CHARTREUSE);
+        clone56.setOpacity(0);
+        clone56.setFill(Color.CHARTREUSE);
+        clone66.setOpacity(0);
+        clone66.setFill(Color.CHARTREUSE);
+        clone76.setOpacity(0);
+        clone76.setFill(Color.CHARTREUSE);
+        clone07.setOpacity(0);
+        clone07.setFill(Color.CHARTREUSE);
+        clone17.setOpacity(0);
+        clone17.setFill(Color.CHARTREUSE);
+        clone27.setOpacity(0);
+        clone27.setFill(Color.CHARTREUSE);
+        clone37.setOpacity(0);
+        clone37.setFill(Color.CHARTREUSE);
+        clone47.setOpacity(0);
+        clone47.setFill(Color.CHARTREUSE);
+        clone57.setOpacity(0);
+        clone57.setFill(Color.CHARTREUSE);
+        clone67.setOpacity(0);
+        clone67.setFill(Color.CHARTREUSE);
+        clone77.setOpacity(0);
+        clone77.setFill(Color.CHARTREUSE);
+    }
 }
 
-//    public void clone50To5140(MouseEvent e) {
-//        if (blue.equals(String.valueOf(clone50.getFill()))) {
-//            if (green.equals(String.valueOf(clone51.getFill())) && green.equals(String.valueOf(clone40.getFill()))) {
-//                clone50.setOpacity(0);
-//                clone50.setFill(Color.CHARTREUSE);
-//                clone51.setOpacity(1);
-//                clone51.setFill(Color.DODGERBLUE);
-//                clone40.setOpacity(1);
-//                clone40.setFill(Color.DODGERBLUE);
-//            }
-//        }
-//    }
-//
-//    public void clone40To4130(MouseEvent e) {
-//        if (blue.equals(String.valueOf(clone40.getFill()))) {
-//            if (green.equals(String.valueOf(clone41.getFill())) && green.equals(String.valueOf(clone30.getFill()))) {
-//                clone40.setOpacity(0);
-//                clone40.setFill(Color.CHARTREUSE);
-//                clone41.setOpacity(1);
-//                clone41.setFill(Color.DODGERBLUE);
-//                clone30.setOpacity(1);
-//                clone30.setFill(Color.DODGERBLUE);
-//            }
-//        }
-//    }
-//
-//    public void clone30To3120(MouseEvent e) {
-//        if (blue.equals(String.valueOf(clone30.getFill()))) {
-//            if (green.equals(String.valueOf(clone31.getFill())) && green.equals(String.valueOf(clone20.getFill()))) {
-//                clone30.setOpacity(0);
-//                clone30.setFill(Color.CHARTREUSE);
-//                clone31.setOpacity(1);
-//                clone31.setFill(Color.DODGERBLUE);
-//                clone20.setOpacity(1);
-//                clone20.setFill(Color.DODGERBLUE);
-//            }
-//        }
-//    }
-//
-//    public void clone20To2110(MouseEvent e) {
-//        if (blue.equals(String.valueOf(clone20.getFill()))) {
-//            if (green.equals(String.valueOf(clone21.getFill())) && green.equals(String.valueOf(clone10.getFill()))) {
-//                clone20.setOpacity(0);
-//                clone20.setFill(Color.CHARTREUSE);
-//                clone21.setOpacity(1);
-//                clone21.setFill(Color.DODGERBLUE);
-//                clone10.setOpacity(1);
-//                clone10.setFill(Color.DODGERBLUE);
-//            }
-//        }
-//    }
-//
-//    public void clone10To1100(MouseEvent e) {
-//        if (blue.equals(String.valueOf(clone10.getFill()))) {
-//            if (green.equals(String.valueOf(clone11.getFill())) && green.equals(String.valueOf(clone00.getFill()))) {
-//                clone10.setOpacity(0);
-//                clone10.setFill(Color.CHARTREUSE);
-//                clone11.setOpacity(1);
-//                clone11.setFill(Color.DODGERBLUE);
-//                clone00.setOpacity(1);
-//                clone00.setFill(Color.DODGERBLUE);
-//            }
-//        }
-//    }
