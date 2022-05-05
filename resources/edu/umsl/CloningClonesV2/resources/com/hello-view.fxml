@@ -17,7 +17,7 @@
     <children>
       <FlowPane alignment="CENTER" layoutX="502.0" layoutY="90.0" prefHeight="410.0" prefWidth="258.0" style="-fx-background-color: AQUA;">
          <children>
-            <Label layoutY="150.0" prefHeight="29.0" prefWidth="239.0" text="TEST ASKDLA:KSD:LAKSJD:LAKSD" translateY="110.0" />
+            <Label fx:id="mascotText" layoutY="150.0" prefHeight="29.0" prefWidth="239.0" text="TEST ASKDLA:KSD:LAKSJD:LAKSD" translateY="110.0" />
             <ImageView fitHeight="100.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="130.0">
                <image>
                   <Image url="@mascot1.png" />
@@ -148,7 +148,7 @@
             <Circle fx:id="clone00" fill="CHARTREUSE" opacity="0.0" radius="31.0" stroke="BLACK" strokeType="INSIDE" />
             </children>
         </GridPane>
-      <Button layoutX="546.0" layoutY="39.0" mnemonicParsing="false" text="Reset" onMouseClicked="#resetBoard"/>
-      <Button layoutX="648.0" layoutY="39.0" mnemonicParsing="false" text="Give Up" />
+      <Button layoutX="546.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#resetBoard" text="Reset" />
+      <Button layoutX="648.0" layoutY="39.0" mnemonicParsing="false" onMouseClicked="#giveUp" text="Give Up" />
     </children>
 </AnchorPane>

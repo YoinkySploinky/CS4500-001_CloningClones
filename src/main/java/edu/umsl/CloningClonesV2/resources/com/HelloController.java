@@ -1,6 +1,7 @@
 package edu.umsl.CloningClonesV2.resources.com;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -16,6 +17,8 @@ public class HelloController {
             clone20, clone21, clone22, clone23, clone24, clone25, clone26, clone27,
             clone10, clone11, clone12, clone13, clone14, clone15, clone16, clone17,
             clone00, clone01, clone02, clone03, clone04, clone05, clone06, clone07;
+
+        public Label mascotText;
 
         String green = "0x7fff00ff";
         String blue = "0x1e90ffff";
@@ -613,6 +616,15 @@ public class HelloController {
                 clone06.setFill(Color.DODGERBLUE);
             }
         }
+    }
+
+    public void giveUp (MouseEvent e) {
+
+        mascotText.setText("Give me the cups;\n" +
+                "And let the kettle to the trumpet speak,\n" +
+                "The trumpet to the cannoneer without,\n" +
+                "The cannons to heavens, the heavens to earth.");
+
     }
     public void resetBoard(MouseEvent e){
         clone60.setOpacity(1);
