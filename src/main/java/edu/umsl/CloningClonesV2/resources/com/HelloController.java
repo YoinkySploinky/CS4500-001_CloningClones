@@ -2,9 +2,16 @@ package edu.umsl.CloningClonesV2.resources.com;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 public class HelloController {
 
     @FXML
@@ -19,9 +26,20 @@ public class HelloController {
             clone00, clone01, clone02, clone03, clone04, clone05, clone06, clone07;
 
         public Label mascotText;
+        public TextField userInput;
+        private String name;
+        private long start;
+        private long finish;
 
         String green = "0x7fff00ff";
         String blue = "0x1e90ffff";
+
+        public void setName(String name){
+            this.name = name;
+        }
+        public String getName() {
+            return name;
+        }
 
     public void clone70To7160(MouseEvent e) {
         if (blue.equals(String.valueOf(clone70.getFill()))) {
@@ -618,12 +636,50 @@ public class HelloController {
         }
     }
 
-    public void giveUp (MouseEvent e) {
-
+    public void giveUp(MouseEvent e) {
         mascotText.setText("Give me the cups;\n" +
                 "And let the kettle to the trumpet speak,\n" +
                 "The trumpet to the cannoneer without,\n" +
                 "The cannons to heavens, the heavens to earth.");
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        finish = System.currentTimeMillis();
+        long timeElapsedMinutes = (((finish - start) / 1000) / 60);
+        int timeElapsedSeconds = (int)(((finish - start) /1000) % 60);
+
+        try {
+            FileWriter log = new FileWriter("log.txt");
+            log.write(dtf.format(now));
+            log.write("\n");
+            log.write(getName());
+            log.write("\n");
+            log.write("The amount of time spent playing Cloning Clones: " + timeElapsedMinutes + " minutes " + timeElapsedSeconds + " seconds");
+            log.close();
+        }
+        catch (IOException err) {
+            System.out.println("An error occurred.");
+            err.printStackTrace();
+        }
+
+    }
+
+    public void inputName(MouseEvent e) {
+
+        if(green.equals(String.valueOf(clone70.getFill())) && green.equals(String.valueOf(clone71.getFill())) && green.equals(String.valueOf(clone60.getFill()))) {
+            String name = userInput.getText();
+
+            setName(name);
+
+            start = System.currentTimeMillis();
+
+            clone70.setFill(Color.DODGERBLUE);
+            clone70.setOpacity(1);
+            clone71.setFill(Color.DODGERBLUE);
+            clone71.setOpacity(1);
+            clone60.setFill(Color.DODGERBLUE);
+            clone60.setOpacity(1);
+        }
 
     }
     public void resetBoard(MouseEvent e){
