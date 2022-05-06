@@ -21,7 +21,7 @@
          <children>
             <TextFlow prefHeight="144.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="mascotText" prefHeight="143.0" prefWidth="202.0" text="TEST ASKDLA:KSD:LAKSJD:LAKSD" wrapText="true" />
+                  <Label fx:id="mascotText" prefHeight="143.0" prefWidth="202.0" text="Text that appears when application is launched" wrapText="true" />
                </children>
             </TextFlow>
             <ImageView fitHeight="100.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="50.0">
