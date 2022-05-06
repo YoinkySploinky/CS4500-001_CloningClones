@@ -637,10 +637,8 @@ public class HelloController {
     }
 
     public void giveUp(MouseEvent e) {
-        mascotText.setText("Give me the cups;\n" +
-                "And let the kettle to the trumpet speak,\n" +
-                "The trumpet to the cannoneer without,\n" +
-                "The cannons to heavens, the heavens to earth.");
+        mascotText.setText("You have given up! You FOOL! YOU ABSOLUTE BUFFON! YOU AREN'T THE CLOWN \n" +
+                "BUT THE ENTIRE CIRCUS!");
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
@@ -668,6 +666,8 @@ public class HelloController {
 
         if(green.equals(String.valueOf(clone70.getFill())) && green.equals(String.valueOf(clone71.getFill())) && green.equals(String.valueOf(clone60.getFill()))) {
             String name = userInput.getText();
+
+            mascotText.setText("You have given your name! Here are the rules!");
 
             setName(name);
 
