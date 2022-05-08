@@ -6,6 +6,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
+import javafx.animation.PauseTransition;
+import javafx.util.Duration;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -662,12 +664,19 @@ public class HelloController {
 
     }
 
-    public void inputName(MouseEvent e) {
+    public void inputName(MouseEvent e){
 
         if(green.equals(String.valueOf(clone70.getFill())) && green.equals(String.valueOf(clone71.getFill())) && green.equals(String.valueOf(clone60.getFill()))) {
             String name = userInput.getText();
 
             mascotText.setText("You have given your name! Here are the rules!");
+            PauseTransition pause1 = new PauseTransition(Duration.seconds(5));
+            pause1.setOnFinished(f -> mascotText.setText("After waiting!"));
+            pause1.play();
+            PauseTransition pause2 = new PauseTransition(Duration.seconds(10));
+            pause2.setOnFinished(f -> mascotText.setText("After waiting a second time!"));
+            pause2.play();
+
 
             setName(name);
 
