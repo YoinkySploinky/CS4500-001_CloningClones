@@ -706,7 +706,7 @@ public class HelloController {
             mascotText.setText("Hello There," + name +"! My name is Snippy! Welcome to Freeing the Clones!");
             PauseTransition pause1 = new PauseTransition(Duration.seconds(5));
             pause1.setOnFinished(f -> mascotText.setText("The goal is to get all of the circles, called clones, out of the jail, the three squares in the bottom left corner."));
-//            pause1.setOnFinished(f -> imageChange.setImage(new Image("resources/edu/umsl/CloningClonesV2/resources/com/mascot2.png")));
+            pause1.setOnFinished(f -> imageChange.setImage(new Image(getClass().getResource("mascot2.png").toExternalForm())));
             pause1.play();
             PauseTransition pause2 = new PauseTransition(Duration.seconds(10));
             pause2.setOnFinished(f -> mascotText.setText("Click on a clone to make your move. A move will consist of a clone creating a clone to the left and that clone moving up."));

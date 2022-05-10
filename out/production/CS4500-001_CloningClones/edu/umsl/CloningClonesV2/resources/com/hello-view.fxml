@@ -24,7 +24,7 @@
                   <Label fx:id="mascotText" prefHeight="143.0" prefWidth="202.0" text="Hello There! Welcome to Freeing the Clones! Please enter a username to begin the game." wrapText="true" />
                </children>
             </TextFlow>
-            <ImageView fitHeight="100.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="50.0">
+            <ImageView fx:id="imageChange" fitHeight="100.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="50.0">
                <image>
                   <Image url="@mascot1.png" />
                </image>
