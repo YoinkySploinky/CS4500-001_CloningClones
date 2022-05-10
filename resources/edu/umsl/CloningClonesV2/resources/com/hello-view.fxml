@@ -19,7 +19,7 @@
     <children>
       <FlowPane alignment="CENTER" layoutX="502.0" layoutY="90.0" prefHeight="410.0" prefWidth="258.0" style="-fx-background-color: AQUA;">
          <children>
-            <TextFlow prefHeight="144.0" prefWidth="200.0">
+            <TextFlow prefHeight="144.0" prefWidth="200.0" translateY="80.0">
                <children>
                   <Label fx:id="mascotText" prefHeight="143.0" prefWidth="202.0" text="Hello There! Welcome to Freeing the Clones! Please enter a username to begin the game." wrapText="true" />
                </children>

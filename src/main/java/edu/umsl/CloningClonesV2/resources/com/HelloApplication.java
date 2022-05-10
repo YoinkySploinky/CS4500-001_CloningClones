@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         Scene scene = new Scene(root);
 
-        stage.setTitle("Hello!");
+        stage.setTitle("Freeing the Clones");
         stage.setScene(scene);
         stage.show();
     }

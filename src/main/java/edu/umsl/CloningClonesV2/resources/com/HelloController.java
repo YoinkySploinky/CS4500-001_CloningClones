@@ -3,6 +3,8 @@ package edu.umsl.CloningClonesV2.resources.com;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -28,6 +30,7 @@ public class HelloController {
             clone00, clone01, clone02, clone03, clone04, clone05, clone06, clone07;
 
         public Label mascotText;
+        public ImageView imageChange;
         public TextField userInput;
         private String name;
         private long start;
@@ -641,6 +644,37 @@ public class HelloController {
     public void giveUp(MouseEvent e) {
         mascotText.setText("You have given up! You FOOL! YOU ABSOLUTE BUFFON! YOU AREN'T THE CLOWN \n" +
                 "BUT THE ENTIRE CIRCUS!");
+        PauseTransition pause1 = new PauseTransition(Duration.seconds(10));
+        pause1.setOnFinished(f -> mascotText.setText("Just kidding but Wow! That was harder than I thought! Let's look at why this game is so hard."));
+        pause1.play();
+        PauseTransition pause2 = new PauseTransition(Duration.seconds(15));
+        pause2.setOnFinished(f -> mascotText.setText("Before I go into explaining, I should tell you that this game is actually impossible to win."));
+        pause2.play();
+        PauseTransition pause3 = new PauseTransition(Duration.seconds(20));
+        pause3.setOnFinished(f -> mascotText.setText("\"But why, Snippy?!\""));
+        pause3.play();
+        PauseTransition pause4 = new PauseTransition(Duration.seconds(25));
+        pause4.setOnFinished(f -> mascotText.setText("I'm so glad you asked! Well, take a look at this graph."));
+        pause4.play();
+        PauseTransition pause5 = new PauseTransition(Duration.seconds(30));
+        pause5.setOnFinished(f -> mascotText.setText("The numbers you see in each box is the weight."));
+        pause5.play();
+        PauseTransition pause6 = new PauseTransition(Duration.seconds(35));
+        pause6.setOnFinished(f -> mascotText.setText("Theoretically, if the sum of the weight of the boxes that make up the jail and the sum of all the other boxes are equal then it is possible to win."));
+        pause6.play();
+        PauseTransition pause7 = new PauseTransition(Duration.seconds(45));
+        pause7.setOnFinished(f -> mascotText.setText("If we do a little math, then we find that the sum of the jail is 2 and that everything outside the jail will always be slightly less than 2."));
+        pause7.play();
+        PauseTransition pause8 = new PauseTransition(Duration.seconds(55));
+        pause8.setOnFinished(f -> mascotText.setText("This means that the only way for the sums to be equal is if we had an infinite board, which is impossible in real life."));
+        pause8.play();
+        PauseTransition pause9 = new PauseTransition(Duration.seconds(65));
+        pause9.setOnFinished(f -> mascotText.setText("And this is why the game is impossible to win! Even though, you didn't win I hope you had just as much fun as I did!"));
+        pause9.play();
+        PauseTransition pause10 = new PauseTransition(Duration.seconds(75));
+        pause10.setOnFinished(f -> mascotText.setText("Thanks for playing!"));
+        pause10.play();
+
 
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         LocalDateTime now = LocalDateTime.now();
@@ -669,13 +703,39 @@ public class HelloController {
         if(green.equals(String.valueOf(clone70.getFill())) && green.equals(String.valueOf(clone71.getFill())) && green.equals(String.valueOf(clone60.getFill()))) {
             String name = userInput.getText();
 
-            mascotText.setText("You have given your name! Here are the rules!");
+            mascotText.setText("Hello There," + name +"! My name is Snippy! Welcome to Freeing the Clones!");
             PauseTransition pause1 = new PauseTransition(Duration.seconds(5));
-            pause1.setOnFinished(f -> mascotText.setText("After waiting!"));
+            pause1.setOnFinished(f -> mascotText.setText("The goal is to get all of the circles, called clones, out of the jail, the three squares in the bottom left corner."));
+//            pause1.setOnFinished(f -> imageChange.setImage(new Image("resources/edu/umsl/CloningClonesV2/resources/com/mascot2.png")));
             pause1.play();
             PauseTransition pause2 = new PauseTransition(Duration.seconds(10));
-            pause2.setOnFinished(f -> mascotText.setText("After waiting a second time!"));
+            pause2.setOnFinished(f -> mascotText.setText("Click on a clone to make your move. A move will consist of a clone creating a clone to the left and that clone moving up."));
             pause2.play();
+            PauseTransition pause3 = new PauseTransition(Duration.seconds(20));
+            pause3.setOnFinished(f -> mascotText.setText("There are a few rules to go over before I can let you play."));
+            pause3.play();
+            PauseTransition pause4 = new PauseTransition(Duration.seconds(25));
+            pause4.setOnFinished(f -> mascotText.setText("First, you cannot move a clone if there is a clone above or to the left of your selected clone."));
+            pause4.play();
+            PauseTransition pause5 = new PauseTransition(Duration.seconds(30));
+            pause5.setOnFinished(f -> mascotText.setText("Second, you cannot move a clone if the new clones will go outside of the board."));
+            pause5.play();
+            PauseTransition pause6 = new PauseTransition(Duration.seconds(35));
+            pause6.setOnFinished(f -> mascotText.setText("There is a reset button at the top right of your screen. That will reset everything to its starting position."));
+            pause6.play();
+            PauseTransition pause7 = new PauseTransition(Duration.seconds(40));
+            pause7.setOnFinished(f -> mascotText.setText("There is also a give up button. This button will allow you to give up and end the game."));
+            pause7.play();
+            PauseTransition pause8 = new PauseTransition(Duration.seconds(45));
+            pause8.setOnFinished(f -> mascotText.setText("That's it for the rules! Seems easy enough, right?"));
+            pause8.play();
+            PauseTransition pause9 = new PauseTransition(Duration.seconds(50));
+            pause9.setOnFinished(f -> mascotText.setText("Let's get started! Good Luck!"));
+            pause9.play();
+            PauseTransition pause10 = new PauseTransition(Duration.seconds(55));
+            pause10.setOnFinished(f -> mascotText.setText(""));
+            pause10.play();
+
 
 
             setName(name);
