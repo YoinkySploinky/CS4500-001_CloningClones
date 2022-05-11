@@ -654,7 +654,10 @@ public class HelloController {
         pause3.setOnFinished(f -> mascotText.setText("\"But why, Snippy?!\""));
         pause3.play();
         PauseTransition pause4 = new PauseTransition(Duration.seconds(25));
-        pause4.setOnFinished(f -> mascotText.setText("I'm so glad you asked! Well, take a look at this graph."));
+        pause4.setOnFinished(f -> {
+            mascotText.setText("I'm so glad you asked! Well, take a look at this graph.");
+            imageChange.setImage(new Image(getClass().getResource("weightGraph.png").toExternalForm()));
+        });
         pause4.play();
         PauseTransition pause5 = new PauseTransition(Duration.seconds(30));
         pause5.setOnFinished(f -> mascotText.setText("The numbers you see in each box is the weight."));
@@ -669,7 +672,10 @@ public class HelloController {
         pause8.setOnFinished(f -> mascotText.setText("This means that the only way for the sums to be equal is if we had an infinite board, which is impossible in real life."));
         pause8.play();
         PauseTransition pause9 = new PauseTransition(Duration.seconds(65));
-        pause9.setOnFinished(f -> mascotText.setText("And this is why the game is impossible to win! Even though, you didn't win I hope you had just as much fun as I did!"));
+        pause9.setOnFinished(f -> {
+            mascotText.setText("And this is why the game is impossible to win! Even though, you didn't win I hope you had just as much fun as I did!");
+            imageChange.setImage(new Image(getClass().getResource("mascot2.png").toExternalForm()));
+        });
         pause9.play();
         PauseTransition pause10 = new PauseTransition(Duration.seconds(75));
         pause10.setOnFinished(f -> mascotText.setText("Thanks for playing!"));
@@ -703,16 +709,18 @@ public class HelloController {
         if(green.equals(String.valueOf(clone70.getFill())) && green.equals(String.valueOf(clone71.getFill())) && green.equals(String.valueOf(clone60.getFill()))) {
             String name = userInput.getText();
 
-            mascotText.setText("Hello There," + name +"! My name is Snippy! Welcome to Freeing the Clones!");
+            mascotText.setText("Hello There, " + name +"! My name is Snippy! Welcome to Freeing the Clones!");
             PauseTransition pause1 = new PauseTransition(Duration.seconds(5));
             pause1.setOnFinished(f -> mascotText.setText("The goal is to get all of the circles, called clones, out of the jail, the three squares in the bottom left corner."));
-            pause1.setOnFinished(f -> imageChange.setImage(new Image(getClass().getResource("mascot2.png").toExternalForm())));
             pause1.play();
             PauseTransition pause2 = new PauseTransition(Duration.seconds(10));
             pause2.setOnFinished(f -> mascotText.setText("Click on a clone to make your move. A move will consist of a clone creating a clone to the left and that clone moving up."));
             pause2.play();
             PauseTransition pause3 = new PauseTransition(Duration.seconds(20));
-            pause3.setOnFinished(f -> mascotText.setText("There are a few rules to go over before I can let you play."));
+            pause3.setOnFinished(f -> {
+                mascotText.setText("There are a few rules to go over before I can let you play.");
+                imageChange.setImage(new Image(getClass().getResource("mascot2.png").toExternalForm()));
+            });
             pause3.play();
             PauseTransition pause4 = new PauseTransition(Duration.seconds(25));
             pause4.setOnFinished(f -> mascotText.setText("First, you cannot move a clone if there is a clone above or to the left of your selected clone."));
