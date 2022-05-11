@@ -719,7 +719,7 @@ public class HelloController {
             pause1.setOnFinished(f -> mascotText.setText("The goal is to get all of the circles, called clones, out of the jail, the three squares in the bottom left corner."));
             pause1.play();
             PauseTransition pause2 = new PauseTransition(Duration.seconds(10));
-            pause2.setOnFinished(f -> mascotText.setText("Click on a clone to make your move. A move will consist of a clone creating a clone to the left and that clone moving up."));
+            pause2.setOnFinished(f -> mascotText.setText("Click on a clone to make your move. A move will consist of a clone creating a clone to the right and that clone moving up."));
             pause2.play();
             PauseTransition pause3 = new PauseTransition(Duration.seconds(20));
             pause3.setOnFinished(f -> {
@@ -728,7 +728,7 @@ public class HelloController {
             });
             pause3.play();
             PauseTransition pause4 = new PauseTransition(Duration.seconds(25));
-            pause4.setOnFinished(f -> mascotText.setText("First, you cannot move a clone if there is a clone above or to the left of your selected clone."));
+            pause4.setOnFinished(f -> mascotText.setText("First, you cannot move a clone if there is a clone above or to the right of your selected clone."));
             pause4.play();
             PauseTransition pause5 = new PauseTransition(Duration.seconds(30));
             pause5.setOnFinished(f -> mascotText.setText("Second, you cannot move a clone if the new clones will go outside of the board."));
