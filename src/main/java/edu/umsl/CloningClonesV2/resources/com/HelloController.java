@@ -674,7 +674,7 @@ public class HelloController {
         PauseTransition pause9 = new PauseTransition(Duration.seconds(65));
         pause9.setOnFinished(f -> {
             mascotText.setText("And this is why the game is impossible to win! Even though, you didn't win I hope you had just as much fun as I did!");
-            imageChange.setImage(new Image(getClass().getResource("mascot2.png").toExternalForm()));
+            imageChange.setImage(new Image(getClass().getResource("mascot3.png").toExternalForm()));
         });
         pause9.play();
         PauseTransition pause10 = new PauseTransition(Duration.seconds(75));
@@ -719,7 +719,7 @@ public class HelloController {
             PauseTransition pause3 = new PauseTransition(Duration.seconds(20));
             pause3.setOnFinished(f -> {
                 mascotText.setText("There are a few rules to go over before I can let you play.");
-                imageChange.setImage(new Image(getClass().getResource("mascot2.png").toExternalForm()));
+                imageChange.setImage(new Image(getClass().getResource("mascot3.png").toExternalForm()));
             });
             pause3.play();
             PauseTransition pause4 = new PauseTransition(Duration.seconds(25));
@@ -735,10 +735,16 @@ public class HelloController {
             pause7.setOnFinished(f -> mascotText.setText("There is also a give up button. This button will allow you to give up and end the game."));
             pause7.play();
             PauseTransition pause8 = new PauseTransition(Duration.seconds(45));
-            pause8.setOnFinished(f -> mascotText.setText("That's it for the rules! Seems easy enough, right?"));
+            pause8.setOnFinished(f -> {
+                mascotText.setText("That's it for the rules! Seems easy enough, right?");
+                imageChange.setImage(new Image(getClass().getResource("mascot2.png").toExternalForm()));
+            });
             pause8.play();
             PauseTransition pause9 = new PauseTransition(Duration.seconds(50));
-            pause9.setOnFinished(f -> mascotText.setText("Let's get started! Good Luck!"));
+            pause9.setOnFinished(f -> {
+                mascotText.setText("Let's get started! Good Luck!");
+                imageChange.setImage(new Image(getClass().getResource("mascot1.png").toExternalForm()));
+            });
             pause9.play();
             PauseTransition pause10 = new PauseTransition(Duration.seconds(55));
             pause10.setOnFinished(f -> mascotText.setText(""));
