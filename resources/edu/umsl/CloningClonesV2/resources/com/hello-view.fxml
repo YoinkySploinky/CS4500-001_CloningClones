@@ -19,14 +19,14 @@
     <children>
       <FlowPane alignment="CENTER" layoutX="502.0" layoutY="90.0" prefHeight="410.0" prefWidth="258.0" style="-fx-background-color: AQUA;">
          <children>
-            <TextFlow prefHeight="144.0" prefWidth="200.0" translateY="80.0">
+            <TextFlow prefHeight="144.0" prefWidth="200.0" translateY="50.0">
                <children>
-                  <Label fx:id="mascotText" prefHeight="143.0" prefWidth="202.0" text="Hello There! Welcome to Freeing the Clones! Please enter a username to begin the game." wrapText="true" />
+                  <Label fx:id="mascotText" prefHeight="145.0" prefWidth="202.0" text="Hello There! Welcome to Freeing the Clones! Please enter a username to begin the game." wrapText="true" />
                </children>
             </TextFlow>
-            <ImageView fx:id="imageChange" fitHeight="100.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" translateX="-50.0" translateY="50.0">
+            <ImageView fx:id="imageChange" fitHeight="100.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" translateX="-30.0" translateY="30.0">
                <image>
-                  <Image url="@mascot1.png" />
+                  <Image url="@mascot1.PNG" />
                </image>
                <FlowPane.margin>
                   <Insets />
