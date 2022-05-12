@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="CS4500_001_CloningClones.jar" size="8175300" download="eager" />
+    <jar href="CS4500_001_CloningClones.jar" size="8175379" download="eager" />
   </resources>
   <jfx:javafx-desc  width="600" height="400" main-class="edu.umsl.CloningClonesV2.resources.com.HelloApplication"  name="CS4500-001_CloningClones" />
   <update check="background"/>
