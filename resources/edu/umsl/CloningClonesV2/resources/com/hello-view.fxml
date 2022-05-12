@@ -158,5 +158,10 @@
       <Button layoutX="601.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#giveUp" text="Give Up" />
       <TextField fx:id="userInput" layoutX="510.0" layoutY="52.0" />
       <Button layoutX="659.0" layoutY="52.0" mnemonicParsing="false" onMouseClicked="#inputName" text="Enter Username" />
+      <ImageView fx:id="weightGraph" fitHeight="502.0" fitWidth="528.0" layoutX="-5.0" mouseTransparent="true" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@weightGraph.PNG" />
+         </image>
+      </ImageView>
     </children>
 </AnchorPane>

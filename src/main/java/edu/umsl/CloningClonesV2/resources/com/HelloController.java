@@ -31,6 +31,7 @@ public class HelloController {
 
         public Label mascotText;
         public ImageView imageChange;
+        public ImageView weightGraph;
         public TextField userInput;
         private String name;
         private long start;
@@ -656,9 +657,7 @@ public class HelloController {
         PauseTransition pause4 = new PauseTransition(Duration.seconds(25));
         pause4.setOnFinished(f -> {
             mascotText.setText("I'm so glad you asked! Well, take a look at this graph.");
-            imageChange.setFitWidth(205.0);
-            imageChange.setFitHeight(200.0);
-            imageChange.setImage(new Image(getClass().getResource("weightGraph.png").toExternalForm()));
+            weightGraph.setOpacity(1);
 
         });
         pause4.play();
